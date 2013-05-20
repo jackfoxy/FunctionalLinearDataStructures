@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IlSandBox", "IlSandBox\IlSandBox.fsproj", "{8557AE13-ABB2-41A8-81A5-56E6EBD2C78A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TupleSandBox", "TupleSandBox\TupleSandBox.fsproj", "{A8C88FE7-ECDB-41B4-B080-75167E212A1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8557AE13-ABB2-41A8-81A5-56E6EBD2C78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8557AE13-ABB2-41A8-81A5-56E6EBD2C78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8557AE13-ABB2-41A8-81A5-56E6EBD2C78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8557AE13-ABB2-41A8-81A5-56E6EBD2C78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C88FE7-ECDB-41B4-B080-75167E212A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C88FE7-ECDB-41B4-B080-75167E212A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C88FE7-ECDB-41B4-B080-75167E212A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C88FE7-ECDB-41B4-B080-75167E212A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
