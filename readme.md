@@ -35,10 +35,10 @@ beginning on line 386 in the original file and line 308 in the altered file. (Th
 
 Saved code for each element by index fetch:<br/>
 <code>call       valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1<int32> VanillaFlatList::get_varFlatList()</code><br/>
-<code>stsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1<int32> '<StartupCode$IlSandBox>'.$VanillaFlatList::'copyOfStruct@9-2</code>
+<code>stsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1&lt;int32> '&lt;StartupCode$IlSandBox>'.$VanillaFlatList::'copyOfStruct@9-2</code>
 	
 which calls into the method performing:<br/>
-<code>ldsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1<int32> '<StartupCode$IlSandBox>'.$VanillaFlatList::varFlatList@5</code><br/>
+<code>ldsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1&lt;int32> '&lt;StartupCode$IlSandBox>'.$VanillaFlatList::varFlatList@5</code><br/>
 <code>ret</code>
 
 All-in-all not a huge savings, unless you consider the addtional overhead roughly doubles the cost in operations to retrieve each element.
