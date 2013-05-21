@@ -34,11 +34,11 @@ The critical section of code can be found in<br/>
 beginning on line 386 in the original file and line 308 in the altered file. (The properties, getters, and setters associated with the unneccessary Struct copies has also been eliminated.) The altered file does not copy the orginal local Struct each time an indexed element is accessed. Instead the original local version of the Struct is used each time. Note in the call to <code>RangeInt32</code> the altered version is changed to create the range <code>2..11</code> to prove the altered code is running.
 
 Saved code for each element by index fetch:<br/>
-    call       valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1&lt;int32> VanillaFlatList::get_varFlatList()
-    stsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1&lt;int32> '&lt;StartupCode$IlSandBox>'.$VanillaFlatList::'copyOfStruct@9-2
+```call       valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1<int32> VanillaFlatList::get_varFlatList()
+stsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1<int32> '<StartupCode$IlSandBox>'.$VanillaFlatList::'copyOfStruct@9-2```
 	
 which calls into the method performing:<br/>
-    ldsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1&lt;int32> '&lt;StartupCode$IlSandBox>'.$VanillaFlatList::varFlatList@5
-    ret
+```ldsfld     valuetype [FSharpx.Collections.Experimental]FSharpx.Collections.Experimental.FlatList`1<int32> '<StartupCode$IlSandBox>'.$VanillaFlatList::varFlatList@5
+ret```
 
 All-in-all not a huge savings, unless you consider the addtional overhead roughly doubles the cost in operations to retrieve each element.
