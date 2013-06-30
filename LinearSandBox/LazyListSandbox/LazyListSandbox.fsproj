@@ -5,12 +5,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>a8c88fe7-ecdb-41b4-b080-75167e212a1f</ProjectGuid>
+    <ProjectGuid>b7326601-0893-41ef-9a8a-8500bc973e27</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TupleSandBox</RootNamespace>
-    <AssemblyName>TupleSandBox</AssemblyName>
+    <RootNamespace>LazyListSandbox</RootNamespace>
+    <AssemblyName>LazyListSandbox</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <Name>TupleSandBox</Name>
+    <Name>LazyListSandbox</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Debug\TupleSandBox.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\LazyListSandbox.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Release\TupleSandBox.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\LazyListSandbox.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
@@ -50,9 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Compile Include="RecordsAreNamedTuples.fs" />
     <Compile Include="Program.fs" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinearSandBox\LinearSandBox.fsproj">
+      <Name>LinearSandBox</Name>
+      <Project>{f53b96fa-2288-4a41-b7e2-5226d3df4267}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

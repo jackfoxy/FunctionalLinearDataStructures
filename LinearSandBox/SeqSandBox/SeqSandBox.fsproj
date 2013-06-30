@@ -5,12 +5,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>a8c88fe7-ecdb-41b4-b080-75167e212a1f</ProjectGuid>
+    <ProjectGuid>962a7f58-e012-40e6-9472-66cdeda3cbd4</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TupleSandBox</RootNamespace>
-    <AssemblyName>TupleSandBox</AssemblyName>
+    <RootNamespace>SeqSandBox</RootNamespace>
+    <AssemblyName>SeqSandBox</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <Name>TupleSandBox</Name>
+    <Name>SeqSandBox</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Debug\TupleSandBox.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\SeqSandBox.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,10 +32,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Release\TupleSandBox.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\SeqSandBox.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharpx.Collections.Experimental">
+      <HintPath>..\packages\FSharpx.Collections.Experimental.1.8.31\lib\40\FSharpx.Collections.Experimental.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FSharpx.Core">
       <HintPath>..\packages\FSharpx.Core.1.8.31\lib\40\FSharpx.Core.dll</HintPath>
       <Private>True</Private>
@@ -50,9 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Compile Include="RecordsAreNamedTuples.fs" />
     <Compile Include="Program.fs" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinearSandBox\LinearSandBox.fsproj">
+      <Name>LinearSandBox</Name>
+      <Project>{f53b96fa-2288-4a41-b7e2-5226d3df4267}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

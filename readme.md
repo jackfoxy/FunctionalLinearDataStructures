@@ -1,6 +1,12 @@
 ##Demo code from Functional Linear Data Structures in FSharp
 ##Lambda Jam Chicago, July 2013
 
+##DeletingHeap Sandbox
+
+Implementation of deleting heap from excercise in Okasaki's book. Future deletes (inserted deletes for which there is no corresponding value in the current heap) drop off from subsequent generations when head passes the internal negative heap head.
+
+Excercise for the reader: implement deleting heap that keeps future deletes live for all subsequent generations while keeping delete, rev, and tail O(log n).
+
 ##IL Sandbox
 
 Step 0 -- create aliases 
@@ -42,3 +48,38 @@ which calls into the method performing:<br/>
 <code>ret</code>
 
 All-in-all not a huge savings, unless you consider the addtional overhead roughly doubles the cost in operations to retrieve each element.
+
+##LazyList Sandbox
+
+Unfolding and appending lazy lists.
+
+##Linear Sandbox
+
+Modules and types for Unfolding Sequence, Multiway Tree, and Deleting Heap  
+
+##Linear Sandbox Test
+
+FsCheck 0.9.0.1, FsUnit 1.2.1.0, and NUnit 2.6.2 tests of DeletingHeap.
+
+##MultiwayTree Sandbox
+
+multiway tree from windowed sequence of data
+
+Breadth first traversal of multiway tree
+
+##Seq Sandbox
+
+Composing all functional linear data structures.
+
+Pattern matching all functional linear data structures (except Heap...an exercise for the reader).
+
+Unfolding infinite sequence of Markov Chain.
+
+##Tuple Sandbox
+
+Explore tuple and record with Telerik Just Decompile or ILSpy
+
+##Windowing Sandbox
+
+Creating and manipulating windowed data sequences with vector
+
