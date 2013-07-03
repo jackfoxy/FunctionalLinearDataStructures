@@ -34,7 +34,7 @@ module MultiwayTree =
 
     let inline singleton x = create x Vector.empty
 
-    let inline forestFromSeq (s : #seq<#seq<_>>) (f : #seq<'a> -> 'a) =
+    let inline forestFromSeq (s : #seq<#seq<_>>) (f : #seq<'a> -> 'a) : MultiwayForest<'a> =   //result type coerced to MultiwayForest
         let rec loop acc l =
             match l with
             | [] -> acc
